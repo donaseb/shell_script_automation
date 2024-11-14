@@ -22,3 +22,4 @@ DISK_USAGE=$(df / | grep / | awk '{ print $5 }' | sed 's/%//g')
 if [ $DISK_USAGE -gt $DISK_THRESHOLD ]; then
     echo "Disk Usage is over threshold: $DISK_USAGE%" | mail -s "High Disk Usage Alert" admin@example.com
 fi
+# can add this file to crontab to do it on a specific time .
